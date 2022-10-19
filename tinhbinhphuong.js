@@ -5,5 +5,5 @@ function square(number) {
 function caculate() {
     let input = document.getElementById("input").value;
     let result = square(input)
-    document.getElementById("result").innerHTML = result
+    document.getElementById("result").innerHTML = result;
 }
