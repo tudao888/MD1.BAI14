@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  <script src="demo.js"></script>
 </head>
 <body>
-
+<script>
+        function func1(a){
+            if(a == 2)
+                return 2;
+            return a * func1(a - 1);
+        }   func1(4)
+        console.log(func1(4))
+</script>
 </body>
 </html>
