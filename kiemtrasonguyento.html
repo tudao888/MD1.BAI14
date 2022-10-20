@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = +prompt("nhap vao so a");
+  // function isPrime(number) {
+    let check = true;
+    for (let i =2; i<=a/2; i++) {
+      if (a%i!==0) {
+        alert(a + "la so nguyen to");
+        check = false;
+        break;
+      }
+    }
+  if (check) {
+      alert(a + "khong la so nguyen to")
+  }
+</script>
+</body>
+</html>
