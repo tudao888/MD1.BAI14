@@ -6,25 +6,36 @@
 </head>
 <body>
 <script>
-  let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , "Regulus"]
-  let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
-  let c = prompt("Nhap vao ten ngoi sao");
-  let flag = false;
-  function check(Polaris) {
-    let i = 0;
-    return i;
-  }
+    let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', "Regulus"]
+    let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+    let c = prompt("Nhap vao ten ngoi sao");
+    function check(str) {
+        let index = a.indexOf(str)
+        console.log(index)
+            if(index !== -1){
+                document.write(b[index])
+            }
+            else {
+                document.write('Khong tim thay sao')
+        }
 
-  for (let i=0;i<a.length;i++) {
-    if (c === a[i]) {
-      document.write(b[i]);
-        flag = true;
+
+        // let flag = false;
+        // for (let i = 0; i < a.length; i++) {
+        //     if (c === a[i]) {
+        //         document.write(b[i]);
+        //         flag = true;
+        //         break;
+        //     }
+        //     else {
+        //         document.write("Khong tim thay sao");
+        //     }
+        // }
+        // if (flag === false) {
+        //     document.write("Khong tim thay sao");
+        // }
     }
-  }
-  if (flag === false) {
-      document.write("Khong tim thay sao")
-  }
-
+    check(c);
 
 </script>
 </body>

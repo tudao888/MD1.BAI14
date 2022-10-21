@@ -6,14 +6,16 @@
 </head>
 <body>
 <script>
-    let a = +prompt("Nhap vao so a")
-
-    function playnumber(a) {
-        let sum = a + 1;
-        return sum;
+let a = prompt("nhap vao so:")
+function check(a) {
+    if (a>0) {
+        alert(true);
     }
-
-    alert(playnumber(a))
+    else {
+        alert(false)
+    }
+}
+check(a);
 </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, -->
+<!--trả về số nguyên có giá trị nhỏ nhất.-->
+<script>
+    let a = +prompt("Nhap vao so a")
+    let b = +prompt("Nhap vao so b")
+    let c = +prompt("Nhap vao so c")
+    let min = a;
+
+    function findMin(a, b, c) {
+        if (b < min) {
+            min = b;
+            return min;
+        } else if (c < min) {
+            min = c;
+            return min;
+        }
+        return min
+    }
+    alert(findMin(a,b,c))
+</script>
+</body>
+</html>

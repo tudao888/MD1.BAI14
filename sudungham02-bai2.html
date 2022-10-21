@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label> Nhập vào bán kinh </label>
+<input id="input" oninput="add()">
+<br>
+<label> Có chu vi hình tròn:</label>
+<span id="perimeter"></span>
+<br>
+<label> Có diện tích hình tròn:</label>
+<span id="area"></span>
+<!--Baif2: Viết hàm tính diện tích, hàm tính chu vi hình tròn.-->
+<!--Gọi hàm vừa xây dựng được-->
+<script>
+function toPerimeter(radius) {
+    let resultPerimeter = radius * 2 * 3.14;
+    return resultPerimeter;
+}
+function toArea(radius) {
+    let resultArea = radius * radius * 3.14;
+    return resultArea;
+}
+function add() {
+    let input = document.getElementById("input").value;
+    let resultPerimeter = toPerimeter(input);
+    let resultArea = toArea(input);
+    document.getElementById("perimeter").innerHTML = resultPerimeter;
+    document.getElementById("area").innerHTML = resultArea;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. -->
+<!--Gọi hàm vừa xây dựng được.-->
+<label>Số:</label>
+<input id="input" oninput="add()">
+<br>
+<label>Có giai thừa là:</label>
+<span id="result"></span>
+<script>
+  let factorial1 = 1;
+  function factorial(x) {
+    for (let i = 1; i <=x; i++) {
+      factorial1 = factorial1 * i;
+    }
+    return factorial1;
+  }
+  function add() {
+    let input = document.getElementById("input").value;
+    let result = factorial(input);
+    document.getElementById("result").innerHTML = result;
+  }
+
+</script>
+</body>
+</html>
