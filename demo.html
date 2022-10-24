@@ -5,13 +5,15 @@
     <title>Title</title>
 </head>
 <body>
+<input type="text" id="input">
+<input type="button" value="ADD" id="add" onclick="them()">
 <script>
-        function func1(a){
-            if(a == 2)
-                return 2;
-            return (a * func1(a - 1));
-        }
-        console.log(func1(5))
+    let arr = ['Iphone', 'Samsung', 'Oppo', 'Nokia'];
+    function them() {
+        let product = document.getElementById("input").value;
+        arr.push(product);
+        console.log(arr)
+    }
 </script>
 </body>
 </html>

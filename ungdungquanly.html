@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h1>Add New Product </h1>
+    <input type="text" id="add" placeholder="New Product">
+    <input type="button" onclick="addProduct()" value="Add">
+</form>
+<br>
+<h1>Display All Product</h1>
+<table id="displayArea" border="1">
+</table>
+<div id="edit">
+</div>
+<script>
+    let listProduct = ['Ip14', 'Samsung Galaxy', 'Xiaomi Note 11', 'Nokia Promax'];
+    displayAll()
+    function displayAll() {
+        let str = '<tr>\n' +
+            '    <td>Product Name</td>\n' +
+            '    <td></td>\n' +
+            '    <td>' + listProduct.length + ' products</td>\n' +
+            '</tr>';
+
+        for (let i = 0; i < listProduct.length; i++) {
+            str += '<tr><td>' + listProduct[i] + '</td>' +
+                '    <td><button onclick="showFormEdit(' + i + ')">Edit</button></td>' +
+                '    <td><button onclick="deleteProduct(' + i + ')">Delete</button></td></tr>'
+        }
+        document.getElementById('displayArea').innerHTML = str;
+    }
+
+    function addProduct() {
+        let productName = document.getElementById('add').value;
+        document.getElementById('add').value = '';
+        listProduct.push(productName);
+        console.log(listProduct)
+        displayAll();
+    }
+
+    function deleteProduct(index) {
+        listProduct.splice(index, 1);
+        displayAll();
+    }
+
+    function showFormEdit(index) {
+        let str = '';
+        str = '<input type="text" value="' + listProduct[index] + '" id = "editProduct"><button onclick="saveProduct(' + index + ')">Save</button>'
+        document.getElementById('edit').innerHTML = str;
+    }
+
+    function saveProduct(index) {
+        listProduct[index] = document.getElementById("editProduct").value;
+        document.getElementById("edit").innerHTML = '';
+        displayAll();
+    }
+</script>
+</body>
+</html>

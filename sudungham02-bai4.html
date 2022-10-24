@@ -8,13 +8,24 @@
 <!--Nếu là ký tự số hàm trả về true, ngược lại trả về false.-->
 <body>
 <script>
+    let flag = true;
   let a = prompt("Enter a character")
   function checkNumber(x) {
-    if (Number(a)) {
-      alert(true)
-    }
-    else {alert(false)}
-  }
+      for (let i of a) {
+          if (!Number(i)) {
+              flag = false;
+            //  alert(true);
+          }
+        //  else {alert(false)}
+      }
+      if(flag){
+          alert(a + " là số")
+      }
+      else {
+          alert(a + "  không là số")
+      }
+      }
+
   checkNumber(a);
 </script>
 </body>
